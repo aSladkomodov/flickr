@@ -1,0 +1,30 @@
+.card {
+  flex: 1 0 300px;
+  box-sizing: border-box;
+  margin: 1rem 0.5em;
+
+  &:hover {
+    box-shadow: 1px 4px 16px 0px rgba(34, 60, 80, 0.2);
+  }
+
+  &-cover {
+    height: 150px;
+
+    > img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .card {
+    max-width: calc(50% - 1em);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .card {
+    max-width: calc(25% - 1em);
+  }
+}

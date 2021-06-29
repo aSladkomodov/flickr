@@ -1,0 +1,38 @@
+.main {
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    &__description {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &-wrapper {
+    margin-top: 20px;
+  }
+}
+
+.tooltip {
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 1px dashed #000;
+}
+.tooltip .tooltiptext {
+  display: none;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  display: block;
+}

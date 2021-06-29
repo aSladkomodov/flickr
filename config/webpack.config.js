@@ -122,6 +122,7 @@ module.exports = function (webpackEnv) {
           // https://github.com/facebook/create-react-app/issues/2677
           ident: 'postcss',
           plugins: () => [
+            require('postcss-nested'),
             require('postcss-flexbugs-fixes'),
             require('postcss-preset-env')({
               autoprefixer: {
@@ -178,7 +179,7 @@ module.exports = function (webpackEnv) {
             // of CSS changes), or refresh the page (in case of JS changes). When you
             // make a syntax error, this client will display a syntax error overlay.
             // Note: instead of the default WebpackDevServer client, we use a custom one
-            // to bring better experience for Create React App users. You can replace
+            // to bring better experience for Create React Main users. You can replace
             // the line below with these two lines if you prefer the stock client:
             //
             // require.resolve('webpack-dev-server/client') + '?/',
@@ -699,7 +700,7 @@ module.exports = function (webpackEnv) {
           reportFiles: [
             // This one is specifically to match during CI tests,
             // as micromatch doesn't match
-            // '../cra-template-typescript/template/src/App.tsx'
+            // '../cra-template-typescript/template/src/Main.tsx'
             // otherwise.
             '../**/src/**/*.{ts,tsx}',
             '**/src/**/*.{ts,tsx}',

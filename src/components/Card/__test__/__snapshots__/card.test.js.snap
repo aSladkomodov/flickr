@@ -32,6 +32,29 @@ exports[`Card component should render Card component 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
     >
+      <a
+        href="href"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Photo title
+      </a>
+       by 
+      <a
+        href="href"
+        rel="noreferrer"
+        target="_blank"
+      >
+        author
+      </a>
+    </p>
+  </div>
+  <div
+    className="MuiCardContent-root"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+    >
       Description:
       <div
         dangerouslySetInnerHTML={

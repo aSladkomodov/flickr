@@ -6,12 +6,23 @@ import Typography from "@material-ui/core/Typography";
 
 import "./style.css";
 
-export const Card = ({ cover, date, description, tags }) => (
+export const Card = ({ cover, date, description, tags, link }) => (
   <CardWrapper className="card">
     <CardHeader subheader={date} />
     <div className="card-cover">
       <img src={cover} alt="cover" loading="lazy" />
     </div>
+    <CardContent>
+      <Typography variant="body2" color="textSecondary" component="p">
+        <a href={cover} target="_blank" rel="noreferrer">
+          Photo title
+        </a>
+        {` by `}
+        <a href={link} target="_blank" rel="noreferrer">
+          author
+        </a>
+      </Typography>
+    </CardContent>
     <CardContent>
       <Typography variant="body2" color="textSecondary" component="p">
         Description:

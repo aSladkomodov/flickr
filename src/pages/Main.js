@@ -20,7 +20,7 @@ export const Main = () => {
 
   const handleActionMainLoadContent = useCallback(
     () => dispatch(actionMainLoadContent()),
-    []
+    [dispatch]
   );
   const handleFilterSearch = useCallback(
     ({ target }) => dispatch(actionMainSetFiler(target.value)),
@@ -63,6 +63,7 @@ export const Main = () => {
                           date={item.date}
                           description={item.description}
                           tags={item.tags}
+                          link={item.link}
                         />
                       ))}
                   </div>

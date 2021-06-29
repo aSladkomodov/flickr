@@ -11,6 +11,7 @@ describe("Card component", () => {
         date={"08.09.2021"}
         description={"description"}
         tags={"tags"}
+        link={"href"}
       />
     );
     expect(snapshot.toJSON()).toMatchSnapshot();
